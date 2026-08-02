@@ -1,5 +1,6 @@
 package tests;
 
+import config.ConfigReader;
 import org.junit.jupiter.api.Test;
 import pages.LoginPage;
 import steps.LoginSteps;
@@ -12,7 +13,9 @@ public class LoginTest {
     @Test
     void loginTest() {
 
-        new LoginSteps().openLoginPage().login("standard_user", "secret_sauce");
+        new LoginSteps()
+                .openLoginPage()
+                .login(ConfigReader.getStandardUser(), ConfigReader.getStandardPassword());
 
         assertTrue(
                 url().contains("inventory")

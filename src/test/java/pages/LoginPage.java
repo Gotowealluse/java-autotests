@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import config.ConfigReader;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
@@ -13,7 +14,7 @@ public class LoginPage {
             loginButton = $("#login-button");
 
     public LoginPage openPage() {
-        open("https://www.saucedemo.com/");
+        open(ConfigReader.getBaseUrl());
         return this;
     }
 
