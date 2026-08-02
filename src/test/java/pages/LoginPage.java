@@ -13,9 +13,22 @@ public class LoginPage {
             loginButton = $("#login-button");
 
     public LoginPage openPage() {
-
         open("https://www.saucedemo.com/");
+        return this;
+    }
 
+    public LoginPage setUserName (String user){
+        username.setValue(user);
+        return this;
+    }
+
+    public LoginPage setPassword (String pass){
+        password.setValue(pass);
+        return this;
+    }
+
+    public LoginPage clickLoginButton(){
+        loginButton.click();
         return this;
     }
 
