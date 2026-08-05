@@ -82,7 +82,7 @@ public class InventoryPage {
     }
     //Методы для получения данных
     public List<String> getCurrentItemNames(){
-        return itemPrices.texts();
+        return itemNames.texts();
     }
 
     public List<String> getCurrentItemPrices(){
