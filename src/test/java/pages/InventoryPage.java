@@ -4,6 +4,8 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import java.util.List;
+
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -59,4 +61,37 @@ public class InventoryPage {
         return this;
     }
     //Сортировка по алфавиту
+    public InventoryPage sortByNameAtoZ(){
+        sortDropdown.selectOption("Name (A to Z)");
+        return this;
+    }
+    //Сортировка против алфавита
+    public InventoryPage sortByNameZtoA(){
+        sortDropdown.selectOption("Name (Z to A)");
+        return this;
+    }
+    //Сортировка по цене
+    public InventoryPage sortByPriceLowToHigh(){
+        sortDropdown.selectOption("Price (low to high)");
+        return this;
+    }
+
+    public InventoryPage sortByPriceHighToLow(){
+        sortDropdown.selectOption("Price (high to low)");
+        return this;
+    }
+    //Методы для получения данных
+    public List<String> getCurrentItemNames(){
+        return itemPrices.texts();
+    }
+
+    public List<String> getCurrentItemPrices(){
+        return itemPrices.texts();
+    }
+
+    public CartPage goToCart(){
+        shoppingCart.click();
+        return new CartPage();
+    }
+
 }
