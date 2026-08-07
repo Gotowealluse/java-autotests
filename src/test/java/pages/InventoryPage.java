@@ -23,6 +23,7 @@ public class InventoryPage {
     private ElementsCollection itemPrices = $$("[data-test='inventory-item-price']");
     private ElementsCollection addToCartButtons = $$("[data-test^='add-to-cart']");
 
+
     //Проверки
     //Загрузка страницы товаров
     public InventoryPage verifyPageLoaded(){
