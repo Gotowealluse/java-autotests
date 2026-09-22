@@ -1,5 +1,6 @@
 package steps;
 
+import pages.InventoryPage;
 import pages.LoginPage;
 
 public class LoginSteps {
@@ -28,5 +29,12 @@ public class LoginSteps {
 
     public LoginSteps login(String username, String password){
         return enterUsername(username).enterPassword(password).submitLogin();
+    }
+
+    public InventoryPage loginAndGoToInventory(String username, String password) {
+        enterUsername(username)
+                .enterPassword(password)
+                .submitLogin();
+        return new InventoryPage();
     }
 }

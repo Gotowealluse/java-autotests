@@ -50,6 +50,7 @@ public class CartPage {
     }
     //Проверка количества товара
     public CartPage verifyAllItemsQuantity(int expectedQuantity){
-        quantities.shouldHave(texts())
+        quantities.shouldHave(texts(String.valueOf(expectedQuantity)));
+        return this;
     }
 }
