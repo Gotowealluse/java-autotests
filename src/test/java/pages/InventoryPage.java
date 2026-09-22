@@ -18,7 +18,7 @@ public class InventoryPage {
     private SelenideElement sortDropdown = $("[data-test='product-sort-container']");
 
     //Коллекции элементов
-    private ElementsCollection inventoryItems = $$("[data-test='inventory-list']");
+    private ElementsCollection inventoryItems = $$("[data-test='inventory-item']");
     private ElementsCollection itemNames = $$("[data-test='inventory-item-name']");
     private ElementsCollection itemPrices = $$("[data-test='inventory-item-price']");
     private ElementsCollection addToCartButtons = $$("[data-test^='add-to-cart']");
